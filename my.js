@@ -4,6 +4,13 @@
   });
   
   //function each for script jquery
+  var obj = {
+   one: 1,
+   two: 2,
+   three: 3,
+   four: 4,
+   five: 5
+};
   $.each(obj, function (index, value) {
     //console.log(value);
   });
