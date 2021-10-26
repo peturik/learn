@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Использование методов hasAttribute(), getAttribute() и setAttribute()</title>
+	</head>
+	<body>
+		<button onclick = "checkAttr()">Click me</button> <!-- добавляем атрибут событий onclick -->
+		<p data-val = "1"></p>
+		<script>
+	function checkAttr() {
+	  const p = document.querySelector("p"), // выбираем первый элемент <p> в документе
+	        attr = "data-val"; // инициализируем переменную строковым значением
+    
+	  if ( p.hasAttribute(attr) ) { // проверяем имеется ли у элемента атрибут со значением, содержащимся в переменной attr
+	    const attrVal = p.getAttribute(attr); // получаем значение этого атрибута
+	    p.innerHTML = attrVal; // добавляем элементу <p> новое содержимое (значение атрибута data-val )
+    
+	    const newAttrVal = Number(attrVal) + 1; // инициализируем переменную, которая увеличивает значение атрибута data-val на 1
+	    p.setAttribute(attr, newAttrVal); // устанавливаем новое значение для атрибута data-val
+	  }  
+	}
+		</script>
+	</body>
+</html>
